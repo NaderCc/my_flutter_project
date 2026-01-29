@@ -18,6 +18,7 @@ class Post {
 
   // تحويل JSON إلى Dart object
   factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
+  Map<String, dynamic> toJson() => _$PostToJson(this);
   
 
 
