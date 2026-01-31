@@ -13,8 +13,10 @@ class PostCubit extends Cubit<PostState>
      try{
        emit(PostLoading());
        List<Post> posts =await apiservice.getPosts();
+       print(posts);
        emit(PostLoaded(posts));
    } catch(e){
+       print(e);
        emit(PostError("Faild to load posts"));
             };
    }

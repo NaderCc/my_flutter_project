@@ -12,4 +12,3 @@ abstract class ApiService{
   @GET("/posts")
   Future<List<Post>> getPosts();
 }
-

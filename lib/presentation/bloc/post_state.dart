@@ -1,7 +1,7 @@
 
 import '../../data/models/post_model.dart';
 
-abstract class PostState {}
+sealed  class PostState {}
 
 class PostInitial extends PostState{}
 
