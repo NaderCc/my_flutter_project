@@ -1,16 +1,16 @@
-# my_flutter_project
+# Project Name: Flutter Post Viewer App
 
-A new Flutter project.
+## Description:
+This project is a simple Flutter-based application that displays a list of posts fetched from an API. 
+Users can view the posts in a carousel and list format. The app also includes a search functionality 
+to filter posts based on the title and body content.
 
-## Getting Started
+## Features:
+- Display posts in a **carousel** format.
+- **Search functionality** to filter posts based on title or body.
+- Use of **BLoC** pattern for state management.
+- Integration with an API using **Retrofit** and **Dio** for fetching data.
+- Responsive design with **autoPlay** feature in the carousel.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation:
+1. Clone the repository:

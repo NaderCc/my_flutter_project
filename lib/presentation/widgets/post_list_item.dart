@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../data/models/post_model.dart';
 
 class PostListItem extends StatefulWidget {
   final List<Post> posts;
-  const PostListItem(this.posts,{super.key});
-  
+  const PostListItem(this.posts, {super.key});
+
   @override
   State<PostListItem> createState() => _PostListItemState();
 }
@@ -13,19 +12,43 @@ class PostListItem extends StatefulWidget {
 class _PostListItemState extends State<PostListItem> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
       itemCount: widget.posts.length,
       itemBuilder: (context, index) {
         final post = widget.posts[index];
-        return Container(
-          decoration: BoxDecoration(
-            color: Colors.white70,
+        return Card(
+          elevation: 2.0,
+          margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+          child: ListTile(
+            contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+            title: Text(
+              post.title,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16.0,
+              ),
+            ),
+            subtitle: Text(
+              post.body,
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.grey[700],
+              ),
+            ),
+            trailing: Text(
+              post.id.toString(),
+              style: TextStyle(
+                color: Colors.blue,
+              ),
+            ),
           ),
-          child:ListTile(
-          title: Text(post.title),
-          subtitle:Text(post.body),
-          trailing: Text(post.id.toString()),
-        ),);
+        );
+      },
+      separatorBuilder: (context, index) {
+        return Divider(
+          color: Colors.indigoAccent,
+          thickness: 1.5,
+        );
       },
     );
   }
